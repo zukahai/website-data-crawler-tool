@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start/Stop Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #startButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #stopButton {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <h1 id="status">222</h1>
+        <div id = content></div>
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
