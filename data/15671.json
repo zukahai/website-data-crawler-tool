@@ -1,0 +1,122 @@
+{
+    "context": {
+        "id": "12191",
+        "name": "My private files",
+        "hid": "MTIxOTEuZHJpdmVz",
+        "token": "20ad5ad91702f220f0d1b87a1a774452",
+        "metatype": "base",
+        "teams": [
+            "272874"
+        ],
+        "owned": true,
+        "owners": [
+            "273193",
+            "380755",
+            "511065"
+        ],
+        "path": "thanhphong1110-drive",
+        "privacy": "public",
+        "engine": {},
+        "user_id": "247016"
+    },
+    "folder": {
+        "id": "15671",
+        "hid": "MTU2NzEuZHJpdmVmb2xkZXJz",
+        "token": "70893ce7d3f487ff3b969b1f2ff9e1cf",
+        "folder_id": "0",
+        "name": "Quy trình",
+        "stats": {
+            "files": 2,
+            "folders": 0
+        },
+        "nodes": [],
+        "order": "15671",
+        "type": "drivefolders",
+        "since": "1696579722",
+        "last_update": "1696579722"
+    },
+    "folders": [],
+    "files": [
+        {
+            "id": "73267",
+            "fid": "202310:sys5573:drive:06:15:JDFU5MRXTJ:ad472c7b616568249e9cc1504f51f9dc:NYC2NLVXB27CP9FRLEEUZTHXE9MWQ4KYZ22UR6GSNHVNM5BKEUK3ZR2C6Y26X3SS86YQC3ECWZNHAU2BL4EWHH.YSCQG6G3FB2W39FQCU5D2APPS3X6SQ2TXSF6G3NF33V6GHFGGE3BJDKWRWFV9HM5-12191-huong_dan_co_ban_bct_theo_nganh_hang.pdf",
+            "src": "https://data-gcdn.basecdn.net/202310/sys5573/drive/06/15/JDFU5MRXTJ/ad472c7b616568249e9cc1504f51f9dc/NYC2NLVXB27CP9FRLEEUZTHXE9MWQ4KYZ22UR6GSNHVNM5BKEUK3ZR2C6Y26X3SS86YQC3ECWZNHAU2BL4EWHH/b5/d9/83/b8/96/2a0ec3e522394d3bb7bba3e3fbd76c51/huong_dan_co_ban_bct_theo_nganh_hang.pdf",
+            "download_url": "https://api.base.vn/files/download?fid=202310:sys5573:drive:06:15:JDFU5MRXTJ:ad472c7b616568249e9cc1504f51f9dc:NYC2NLVXB27CP9FRLEEUZTHXE9MWQ4KYZ22UR6GSNHVNM5BKEUK3ZR2C6Y26X3SS86YQC3ECWZNHAU2BL4EWHH.YSCQG6G3FB2W39FQCU5D2APPS3X6SQ2TXSF6G3NF33V6GHFGGE3BJDKWRWFV9HM5-12191-huong_dan_co_ban_bct_theo_nganh_hang.pdf&name=HUONG+DAN+CO+BAN+BCT+THEO+NGANH+HANG.pdf",
+            "is_image": 0,
+            "size": 172004,
+            "preview": {
+                "url": "https://data-gcdn.basecdn.net/202310/sys5573/drive/06/15/JDFU5MRXTJ/ad472c7b616568249e9cc1504f51f9dc/NYC2NLVXB27CP9FRLEEUZTHXE9MWQ4KYZ22UR6GSNHVNM5BKEUK3ZR2C6Y26X3SS86YQC3ECWZNHAU2BL4EWHH/b5/d9/83/b8/96/2a0ec3e522394d3bb7bba3e3fbd76c51/huong_dan_co_ban_bct_theo_nganh_hang.pdf",
+                "name": "HUONG DAN CO BAN BCT THEO NGANH HANG.pdf"
+            },
+            "type": "drivefiles",
+            "hid": "NzMyNjcuZHJpdmVmaWxlcw",
+            "token": "d6d5db83c8deb8ac5445ddda7406b6b4",
+            "name": "HUONG DAN CO BAN BCT THEO NGANH HANG.pdf",
+            "since": "1696579857",
+            "followers": [],
+            "username": "vania",
+            "gavatar": "https://data-gcdn.basecdn.net/avatar/sys5573/bf/5f/54/1b/7e/5e406f8e8ccdff5a18bc0b09f2f532c6/vania_5573.jpg",
+            "folder_id": "15671",
+            "stats": {
+                "views": 4,
+                "comments": 0,
+                "likes": 0,
+                "files": 0,
+                "size": 172004
+            },
+            "note": {},
+            "summary": "",
+            "metatype": "file"
+        },
+        {
+            "id": "73266",
+            "fid": "202310:sys5573:drive:06:15:RNE3YB8T85:63c4534ada82ba566dfdd778e9bfed5b:ZDQX5XF4G43ZEHUG63MEEFJ5ZJFWQBAEFPACQEGTEBWRK8FBA5VXHK3CPB2V492DDHGJ2JY9CTRSACSMNXRUUX.YXE69DP57Z2F4MNN29CWHLLFF46R4HMA3J8DYRPRTCSJ2SFAETL7UJWVEUA7XBNX-12191-vpharchem_quy_trinh_thuoc_chung_updated_06.10.20.pdf",
+            "src": "https://data-gcdn.basecdn.net/202310/sys5573/drive/06/15/RNE3YB8T85/63c4534ada82ba566dfdd778e9bfed5b/ZDQX5XF4G43ZEHUG63MEEFJ5ZJFWQBAEFPACQEGTEBWRK8FBA5VXHK3CPB2V492DDHGJ2JY9CTRSACSMNXRUUX/f5/23/22/de/1a/7bd7aa4ed209a2a3f81cdb85c4239bc4/vpharchem_quy_trinh_thuoc_chung_updated_06.10.20.pdf",
+            "download_url": "https://api.base.vn/files/download?fid=202310:sys5573:drive:06:15:RNE3YB8T85:63c4534ada82ba566dfdd778e9bfed5b:ZDQX5XF4G43ZEHUG63MEEFJ5ZJFWQBAEFPACQEGTEBWRK8FBA5VXHK3CPB2V492DDHGJ2JY9CTRSACSMNXRUUX.YXE69DP57Z2F4MNN29CWHLLFF46R4HMA3J8DYRPRTCSJ2SFAETL7UJWVEUA7XBNX-12191-vpharchem_quy_trinh_thuoc_chung_updated_06.10.20.pdf&name=VPHARCHEM_QUY+TR%C3%8CNH+THU%E1%BB%90C+CH%E1%BB%A8NG+UPDATED+06.10.2023.pdf",
+            "is_image": 0,
+            "size": 463801,
+            "preview": {
+                "url": "https://data-gcdn.basecdn.net/202310/sys5573/drive/06/15/RNE3YB8T85/63c4534ada82ba566dfdd778e9bfed5b/ZDQX5XF4G43ZEHUG63MEEFJ5ZJFWQBAEFPACQEGTEBWRK8FBA5VXHK3CPB2V492DDHGJ2JY9CTRSACSMNXRUUX/f5/23/22/de/1a/7bd7aa4ed209a2a3f81cdb85c4239bc4/vpharchem_quy_trinh_thuoc_chung_updated_06.10.20.pdf",
+                "name": "VPHARCHEM_QUY TRÌNH THUỐC CHỨNG UPDATED 06.10.2023.pdf"
+            },
+            "type": "drivefiles",
+            "hid": "NzMyNjYuZHJpdmVmaWxlcw",
+            "token": "8b18a3f22c51172ae1c156d0f434c389",
+            "name": "VPHARCHEM_QUY TRÌNH THUỐC CHỨNG UPDATED 06.10.2023.pdf",
+            "since": "1696579745",
+            "followers": [],
+            "username": "vania",
+            "gavatar": "https://data-gcdn.basecdn.net/avatar/sys5573/bf/5f/54/1b/7e/5e406f8e8ccdff5a18bc0b09f2f532c6/vania_5573.jpg",
+            "folder_id": "15671",
+            "stats": {
+                "views": 3,
+                "comments": 0,
+                "likes": 0,
+                "files": 0,
+                "size": 463801
+            },
+            "note": {},
+            "summary": "",
+            "metatype": "file"
+        }
+    ],
+    "traces": [
+        {
+            "id": "15671",
+            "hid": "MTU2NzEuZHJpdmVmb2xkZXJz",
+            "token": "70893ce7d3f487ff3b969b1f2ff9e1cf",
+            "folder_id": "0",
+            "name": "Quy trình",
+            "stats": {
+                "files": 2,
+                "folders": 0
+            },
+            "nodes": [],
+            "order": "15671",
+            "type": "drivefolders",
+            "since": "1696579722",
+            "last_update": "1696579722"
+        }
+    ],
+    "title": "My private files - My private files - Base Drive"
+}

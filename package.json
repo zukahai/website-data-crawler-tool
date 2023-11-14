@@ -1,0 +1,32 @@
+{
+  "name": "drive.base.vn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/main.js",
+    "build": "webpack",
+    "pack": "npm run build && pkg ./dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zukahai/drive.base.vn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zukahai/drive.base.vn/issues"
+  },
+  "homepage": "https://github.com/zukahai/drive.base.vn#readme",
+  "dependencies": {
+    "axios": "^1.6.1",
+    "json2csv": "^6.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
