@@ -49,6 +49,7 @@ const callApi = async (data, id, page) => {
 (async () => {
     const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
     queue.push({
+        index: "",
         id: -1,
         name: "root",
     })
@@ -65,14 +66,15 @@ const callApi = async (data, id, page) => {
 
         let page = 1;
         let folders = [];
+        let index = 1;
         do {
             const data = await callApi(config, q.id, page++);
             folders = data.folders;
-
             for (const item of folders) {
                 const date = new Date(item.last_update * 1000);
                 const formattedDate = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)} ${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear() % 100}`;
                 const subForder = {
+                    index: q.index + index++ + ".",
                     stt: results.length + 1,
                     id: item.id,
                     name: item.name,
@@ -92,6 +94,7 @@ const callApi = async (data, id, page) => {
                 const date = new Date(item.since * 1000);
                 const formattedDate = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)} ${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear() % 100}`;
                 const subForder = {
+                    index: q.index + index++ + ".",
                     stt: results.length + 1,
                     id: item.id,
                     name: item.preview.name,
@@ -112,6 +115,17 @@ const callApi = async (data, id, page) => {
 
 })();
 
+const conpare = (a, b) => {
+    const arrA = a.split('.');
+    const arrB = b.split('.');
+    for (let i = 0; i < Math.min(arrA.length, arrB.length); i++) {
+        if (arrA[i] !== arrB[i]) {
+            return Math.floor(arrA[i] )- Math.floor(arrB[i]);
+        }
+    }
+    return arrA.length - arrB.length;
+}
+
 const json_to_csv = (data) => {
     const folderResult = 'results'
     if (!fs.existsSync(folderResult)) {
@@ -119,7 +133,12 @@ const json_to_csv = (data) => {
     }
     const jsonData = data
 
-    const fields = ['stt', 'id', 'name', 'link', 'files', 'folders', 'lastUpdate', 'isFile', 'linkFile'];
+    // sắp xếp data theo index
+    jsonData.sort((a, b) => {
+        return conpare(a.index, b.index);
+    })
+
+    const fields = ['index', 'stt', 'id', 'name', 'link', 'files', 'folders', 'lastUpdate', 'isFile', 'linkFile'];
 
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(jsonData);
