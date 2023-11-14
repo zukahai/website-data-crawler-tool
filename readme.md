@@ -1,7 +1,7 @@
 # Craw Files and Folders
 
 ## Download
-[Download Zip](./product.zip)
+[Download Zip](https://github.com/zukahai/website-data-crawler-tool/raw/main/product.zip)
 
 ## Cách dùng
 Truy cập vàp trang https://drive.base.vn
