@@ -1,4 +1,4 @@
-('G:\\Mai\\build\\app\\PYZ-00.pyz',
+('G:\\website-data-crawler-tool\\dichvucong.dav.gov.vn\\build\\app\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__future__.py',
    'PYMODULE'),
