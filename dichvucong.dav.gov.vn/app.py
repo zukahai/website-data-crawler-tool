@@ -163,7 +163,72 @@ def nguyen_lieu():
         print(f"Request failed with status code: {response.status_code}")
         print(response.text)
 
+def congbotaduocvonang():
+    url = "https://dichvucong.dav.gov.vn/api/services/app/congBoTaDuocVoNang/getAllServerPaging"
+
+    headers = {
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "vi,en-US;q=0.9,en;q=0.8",
+        "content-type": "application/json;charset=UTF-8",
+        "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"YaBrowser\";v=\"24.1\", \"Yowser\";v=\"2.5\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-requested-with": "XMLHttpRequest",
+        "x-xsrf-token": "nQfvmy6ai7ofMlH5BA-NhQw0aVV_GetzbMBh4yGI9DXUoitytnEYFT0uLd1WM29-yrNx7wiQYNOpGWXzkDP8w83cdksQvmGsIyFUR_TLU801"
+    }
+
+    data = {
+        "keyword": None,
+        "filterByIsActive": True,
+        "skipCount": 0,
+        "maxResultCount": 200000,
+        "sorting": None
+    }
+
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+
+    if response.status_code == 200:
+        # Xử lý dữ liệu ở đây, ví dụ:
+        json_data = response.json()
+
+        header = ['SỐ ĐĂNG KÝ LƯU HÀNH', 'NGÀY HẾT HIỆU LỰC SỐ ĐĂNG KÝ', 'TÊN TÁ DƯỢC, VỎ NANG'
+                  'TÊN CƠ SỞ SẢN XUẤT', 'NƯỚC SẢN XUẤT', 'TIÊU CHUẨN CHẤT LƯỢNG']
+        data = [header]
+
+        for item in json_data['result']['items']:
+            row = [
+                item['soDangKyLuuHanh'],
+                item['ngayHetHieuLucSDK'],
+                item['tenTaDuocVoNang'],
+                item['tenCoSoSanXuat'],
+                item['nuocSanXuat'],
+                item['tieuChuanChatLuong'],
+            ]
+            data.append(row)
+
+        csv_file_path = 'congbotaduocvonang.csv'
+
+        # Write data to CSV file
+        # Mở tệp CSV để ghi (nếu tệp không tồn tại, nó sẽ được tạo mới)
+        with open(csv_file_path, 'w', newline='', encoding='utf-8') as csv_file:
+            # Tạo một đối tượng CSV writer
+            csv_writer = csv.writer(csv_file)
+
+            # Ghi dữ liệu vào tệp CSV với header
+            csv_writer.writerows(data)
+        print('Có ' + str(len(data) - 1) + ' dữ liệu')
+        print(f'Tệp CSV đã được ghi tại: {csv_file_path}')
+
+        print(f"Data written to {csv_file_path}")
+    else:
+        print("Yêu cầu không thành công. Mã trạng thái:", response.status_code)
+
+
 
 if __name__ == "__main__":
     thuoc()
     nguyen_lieu()
+    congbotaduocvonang()
