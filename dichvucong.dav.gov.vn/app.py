@@ -48,7 +48,7 @@ def thuoc():
 
         for item in json_data['result']['items']:
             row = [
-                item['soDangKy'], 
+                str(item['soDangKy']), 
                 item['ngayHetHanSoDangKy'], 
                 item['tenNguyenLieu'],
                 item['phanLoai'],
@@ -123,7 +123,7 @@ def nguyen_lieu():
 
         for item in json_data['result']['items']:
             row = [
-                item['soDangKy'],
+                str(item['soDangKy']),
                 item['thongTinDangKyThuoc']['ngayHetHanSoDangKy'],
                 item['tenThuoc'],
                 item['thongTinThuocCoBan']['hoatChatChinh'],
