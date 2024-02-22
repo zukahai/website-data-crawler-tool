@@ -9,7 +9,7 @@ Truy cập vàp trang https://drive.base.vn
 
 <p align="center"> <img src="./images/1.png" alt="bg" /> </p>
 
-Chọn qua tab **net work**.
+Chọn qua tab **net work**. 
 
 <p align="center"> <img src="./images/2.png" alt="bg" /> </p>
 
