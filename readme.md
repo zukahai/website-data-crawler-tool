@@ -19,3 +19,7 @@ Click vào thư mục gốc của bạn (1), chọn **thanhphong..**
 Tại tab **payload**, hãy lấy những thông tin này cho vào file **config.json**
 
 Cuối cùng chạy file exe tương ứng.
+
+Nếu dùng windown thì chạy file **bundle-win.exe**.<br>
+Nếu dùng linux thì chạy file **bundle-linux**.<br>
+Nếu dùng mac thì chạy file **bundle-macos**.
