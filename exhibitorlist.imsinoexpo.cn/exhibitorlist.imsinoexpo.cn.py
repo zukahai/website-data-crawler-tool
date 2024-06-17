@@ -12,12 +12,10 @@ def call_api(page):
         "sec-ch-ua-platform": "\"Windows\"",
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "cookie": "_gcl_au=1.1.1419255749.1716378964; _gid=GA1.2.1279254225.1716378964; PHPSESSID=465359178c110f13ee6d956385271b22; _gat_gtag_UA_2339291_50=1; _ga=GA1.1.1199822296.1716378964; _ga_V7M4Q3KE11=GS1.1.1716378964.1.1.1716379393.60.0.0",
-        "Referer": "https://exhibitorlist.imsinoexpo.cn/front/index.html?uri=cphipmecchina2024shanghai&session=&lan=EN",
-        "Referrer-Policy": "strict-origin-when-cross-origin"
+        "sec-fetch-site": "same-origin"
     }
-    payload = {
+    referrer = "https://exhibitorlist.imsinoexpo.cn/front/index.html?uri=cphipmecchina2024shanghai&session=&lan=EN"
+    data = {
         "uri": "cphipmecchina2024shanghai",
         "session": "",
         "keyword": "",
@@ -25,23 +23,28 @@ def call_api(page):
         "hall_id": [],
         "area": [],
         "page": page,
-        "per_page": 100,
+        "per_page": 10,
         "lang": 2
     }
 
-    response = requests.post(url, headers=headers, json=payload)
+
+    response = requests.post(url, headers=headers, json=data, cookies={"referrer": referrer})
 
     # Print the response
     rp = response.json()['data']['list']['data']
-    return rp
+    totalPage = response.json()['data']['list']['last_page'];
+    isEnd = False if totalPage != page else True
+    print(f"Page {page} / {totalPage}  done")
+    return [rp, isEnd]
 header = ['id', 'title', 'title_py', 'title_en', 'product_info', 'product_info_en', 'group_id', 'group_session_id', 'category_id', 'cur_category_name_en', 'cur_category_name', 'hall_id', 'cur_hall_name', 'area_id', 'area', 'area_en', 'cur_area_name', 'logo', 'bg_cover', 'pos_no', 'addr', 'desc', 'sort', 'delete_time', 'create_time', 'update_time', 'hsort']
 data = [header]
 
-for page in range(1, 40):
+for page in range(1, 100):
     rp = call_api(page)
-    if len(rp) == 0:
+    if rp[1]:
         break
     for item in rp:
+        print(item)
         row = [
             item['id'],
             item['title'],
@@ -69,7 +72,7 @@ for page in range(1, 40):
             item['delete_time'],
             item['create_time'],
             item['update_time'],
-            item['hsort']
+            item['sort']
         ]
         data.append(row)
     print(f"Page {page} done")
